@@ -18,6 +18,93 @@ class CustomerRouter {
   initializeRouter() {
     let router = this[ROUTER_SYMBOL];
 
+    router.get("/all", async (request, response) => {
+      let customers = [
+        {
+          id: 11,
+          name: "Northwind 1",
+          address: "Bangalore",
+          credit: 23000,
+          status: true,
+          email: "info@email.com",
+          phone: "080-49834343",
+          remarks: "Simple"
+        },
+        {
+          id: 12,
+          name: "Northwind 2",
+          address: "Bangalore",
+          credit: 23000,
+          status: true,
+          email: "info@email.com",
+          phone: "080-49834343",
+          remarks: "Simple"
+        },
+        {
+          id: 13,
+          name: "Northwind 3",
+          address: "Bangalore",
+          credit: 23000,
+          status: true,
+          email: "info@email.com",
+          phone: "080-49834343",
+          remarks: "Simple"
+        },
+        {
+          id: 14,
+          name: "Northwind 4",
+          address: "Bangalore",
+          credit: 23000,
+          status: true,
+          email: "info@email.com",
+          phone: "080-49834343",
+          remarks: "Simple"
+        },
+        {
+          id: 15,
+          name: "Northwind 5",
+          address: "Bangalore",
+          credit: 23000,
+          status: true,
+          email: "info@email.com",
+          phone: "080-49834343",
+          remarks: "Simple"
+        },
+        {
+          id: 16,
+          name: "Northwind 6",
+          address: "Bangalore",
+          credit: 23000,
+          status: true,
+          email: "info@email.com",
+          phone: "080-49834343",
+          remarks: "Simple"
+        },
+        {
+          id: 17,
+          name: "Northwind 7",
+          address: "Bangalore",
+          credit: 23000,
+          status: true,
+          email: "info@email.com",
+          phone: "080-49834343",
+          remarks: "Simple"
+        },
+        {
+          id: 18,
+          name: "Northwind 8",
+          address: "Bangalore",
+          credit: 23000,
+          status: true,
+          email: "info@email.com",
+          phone: "080-49834343",
+          remarks: "Simple"
+        }
+      ];
+
+      response.status(HttpConstants.OK).send(customers);
+    });
+
     router.get("/", async (request, response) => {
       try {
         let customers = await customerService.getCustomers();
