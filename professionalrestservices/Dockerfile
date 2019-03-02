@@ -6,4 +6,4 @@ WORKDIR /app
 
 EXPOSE 9090
 
-ENTRYPOINT [ "npm start" ]
+ENTRYPOINT [ "./node_modules/.bin/babel-node index-single.js" ]
