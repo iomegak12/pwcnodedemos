@@ -1,3 +1,4 @@
 import { CustomerRouter } from "./customer-router";
+import { AuthenticationRouter } from "./authentication-router";
 
-export { CustomerRouter };
+export { CustomerRouter, AuthenticationRouter };

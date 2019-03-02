@@ -1,11 +1,14 @@
 import { SingleNodeHost } from "./hosting";
 
 const DEFAULT_PORT = 9090;
+const DEFAULT_GLOBAL_SECRET_KEY = "PwC,Bangalore";
 
 class MainClass {
   static main() {
     const portNumber = process.env.LISTENER_PORT || DEFAULT_PORT;
-    const host = new SingleNodeHost(portNumber);
+    const globalSecretKey =
+      process.env.GLOBAL_SECRET_KEY || DEFAULT_GLOBAL_SECRET_KEY;
+    const host = new SingleNodeHost(portNumber, globalSecretKey);
 
     host
       .startServer()
@@ -21,7 +24,6 @@ class MainClass {
 
     process.on("SIGTERM", shutdown);
     process.on("SIGINT", shutdown);
-    process.on("SIGKILL", shutdown);
     process.on("exit", shutdown);
   }
 }

@@ -6,7 +6,10 @@ const ErrorConstants = {
   INVALID_NEW_CUSTOMER_DETAILS: "Invalid New Customer Details Provided!",
   INVALID_LISTENER_PORT: "Invalid Listener Port Specified!",
   INVALID_SOCKET_SERVER_DEFINITION:
-    "Invalid Socket Server Definition Specified!"
+    "Invalid Socket Server Definition Specified!",
+  INVALID_CREDENTIALS: "Invalid Credentials Specified!",
+  AUTHORIZED_FAILED: "Authorization Failed!",
+  INVALID_SECRET_KEY: "Invalid JWT Secret Key Specified!"
 };
 
 export { ErrorConstants };
