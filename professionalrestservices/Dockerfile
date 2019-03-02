@@ -6,4 +6,4 @@ WORKDIR /app
 
 EXPOSE 9090
 
-ENTRYPOINT [ "npm start" ]
+ENTRYPOINT [ "npm", "start" ]
